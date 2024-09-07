@@ -24,4 +24,5 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-----以下ブランチテスト用(後で消そう)
+日本組
+佐藤大生
