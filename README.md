@@ -26,3 +26,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 日本組
 荻野新
+岡本泉里
