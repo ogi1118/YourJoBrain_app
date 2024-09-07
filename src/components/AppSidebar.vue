@@ -78,21 +78,23 @@ export default {
   height: 100%;
   background-color: #f4f4f4;
   padding: 0;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   width: 200px;
-  position: relative;
+  display: flex;
+  flex-direction: column; /* フレックスボックスで縦方向に配置 */
+  justify-content: space-between; /* 上下に要素を配置し、スクロールバーの範囲を調整 */
 }
 
 .setting-button {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%; /* 幅をサイドバー全体に合わせる */
   padding: 10px;
   background-color: #9f9c9c;
   color: #fff;
   text-align: center;
+  border: none; /* ボタンのデフォルトの枠線を消す */
+  position: relative; /* positionをrelativeに設定 */
 }
+
 
 .mypage-button {
   width: 100%;
@@ -106,7 +108,22 @@ export default {
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 0;
+  flex-grow: 1; /* ボディ部分は残りの空間を埋める */
+  overflow-y: auto; /* ボディ部分をスクロール可能にする */
+}
+
+ul::-webkit-scrollbar {
+  width: 6px; /* スクロールバーの幅を細くする */
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* スクロールバーのつまみを薄く表示 */
+  border-radius: 3px; /* スクロールバーの角を丸くする */
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* マウスオーバー時に少し濃くする */
 }
 
 li {
