@@ -25,6 +25,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 日本組
+佐藤大生
 荻野新
 書き足し
 岡本泉里
