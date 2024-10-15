@@ -1,0 +1,45 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: peri_mysql_container
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - peri_network
+    restart: always
+
+  app:
+    build: .
+    container_name: YourJoBrain
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - peri_network
+    depends_on:
+      - db
+
+  server:
+    build:
+      context: ./server
+    container_name: peri_server
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    networks:
+      - peri_network
+
+volumes:
+  db_data:
+
+networks:
+  peri_network:
+    driver: bridge

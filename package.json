@@ -1,15 +1,22 @@
 {
-  "name": "vue-test-app",
+  "name": "YourJoBrain",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "vue-cli-service start"
   },
   "dependencies": {
+    "@tiptap/starter-kit": "^2.6.6",
+    "@tiptap/vue-3": "^2.6.6",
+    "axios": "^1.7.7",
     "core-js": "^3.8.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "install": "^0.13.0",
+    "markdown-it": "^14.1.0",
     "mitt": "^3.0.1",
     "vue": "^3.2.13",
     "vue-router": "^4.4.3",

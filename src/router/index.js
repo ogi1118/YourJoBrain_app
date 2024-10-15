@@ -6,6 +6,7 @@ import Services from "../components/ServicesPage.vue";
 import Contact from "../components/ContactPage.vue";
 import NewItem from "../components/NewItem.vue";
 import NewItemPage from "../components/NewItemPage.vue";
+import CompanyPage from "../components/CompanyPage.vue";
 
 const routes = [
   { path: "/", name: "HomePage", component: Home },
@@ -18,7 +19,13 @@ const routes = [
     component: NewItem,
     props: true,
   },
-  { path: "/New-item", name: "NewItemPage", component: NewItemPage}
+  { path: "/New-item", name: "NewItemPage", component: NewItemPage },
+  {
+    path: "/:title",
+    name: "CompanyPage",
+    component: CompanyPage,
+    props: true, // propsを有効にする
+  },
 ];
 
 const router = createRouter({
